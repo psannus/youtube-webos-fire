@@ -70,3 +70,20 @@
   position: absolute !important;
   width: 100% !important;
 }
+
+/* Move suggested videos out of the way of the controls */
+.ytlr-pivot--controls .ytlr-pivot__pivot-el {
+  opacity: 0 !important;
+}
+
+.ytlr-watch-default__metadata-container {
+  bottom: 6.5rem !important;
+}
+
+.ytlr-watch-default__transport-controls-container {
+  bottom: 6.5rem !important;
+}
+
+.ytlr-watch-default__progress-bar {
+  bottom: 1.75rem !important;
+}
