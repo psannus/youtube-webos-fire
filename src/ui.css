@@ -63,7 +63,12 @@
 
 /* Fixes transparency effect for the video player */
 .ytlr-watch-default__shadow {
-  background: none !important;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 68%,
+    rgba(0, 0, 0, 1) 100%
+  ) !important;
+  background-color: rgba(0, 0, 0, 0) !important;
   display: block !important;
   height: 100% !important;
   pointer-events: none !important;
