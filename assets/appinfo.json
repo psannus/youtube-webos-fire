@@ -1,10 +1,10 @@
 {
   "id": "youtube.leanback.v4",
-  "version": "0.3.4",
+  "version": "0.3.6",
   "vendor": "webosbrew.org",
   "type": "web",
   "main": "index.html",
-  "title": "YouTube AdFree",
+  "title": "YouTube AdFree Fire",
   "icon": "icon.png",
   "largeIcon": "largeIcon.png",
   "iconColor": "#ff0000",

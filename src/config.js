@@ -2,7 +2,7 @@ const CONFIG_KEY = 'ytaf-configuration';
 
 const configOptions = new Map([
   ['enableAdBlock', { default: true, desc: 'Enable ad blocking' }],
-  ['removeShorts', { default: true, desc: 'Remove Shorts from subscriptions' }],
+  ['removeShorts', { default: true, desc: 'Remove Shorts' }],
   ['enableSponsorBlock', { default: true, desc: 'Enable SponsorBlock' }],
   [
     'enableSponsorBlockSponsor',
@@ -36,6 +36,13 @@ const configOptions = new Map([
     {
       default: false,
       desc: 'Hide YouTube logo'
+    }
+  ],
+  [
+    'enlargeVideosOnHomepage',
+    {
+      default: false,
+      desc: 'Enlarge videos on homepage'
     }
   ]
 ]);
