@@ -16,6 +16,12 @@ JSON.parse = function () {
     setEnlargeToFalse(sectionListRenderer);
   }
 
+  // continuationContents.sectionListContinuation.contents[0].shelfRenderer.tvhtml5Style.effects.enlarge = true;
+  const sectionListContinuation = findFirstObject(r, 'sectionListContinuation');
+  if (sectionListContinuation?.contents) {
+    setEnlargeToFalse(sectionListContinuation);
+  }
+
   return r;
 };
 
