@@ -9,6 +9,12 @@ JSON.parse = function () {
     return r;
   }
 
+  // Remove shorts from section lists (rows)
+  const sectionListRenderer = findFirstObject(r, 'sectionListRenderer');
+  if (sectionListRenderer?.contents) {
+    removeShortsSection(sectionListRenderer);
+  }
+
   // First page of subscriptions tab
   const gridRenderer = findFirstObject(r, 'gridRenderer');
   if (gridRenderer?.items) {
@@ -27,6 +33,14 @@ JSON.parse = function () {
 function removeShorts(container) {
   container.items = container.items.filter(
     (elm) => elm?.tileRenderer?.onSelectCommand?.reelWatchEndpoint == null
+  );
+}
+
+function removeShortsSection(sectionList) {
+  sectionList.contents = sectionList.contents.filter(
+    (elm) =>
+      elm?.shelfRenderer?.tvhtml5ShelfRendererType !==
+      'TVHTML5_SHELF_RENDERER_TYPE_SHORTS'
   );
 }
 
